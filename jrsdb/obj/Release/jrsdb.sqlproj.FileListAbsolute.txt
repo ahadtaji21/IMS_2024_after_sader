@@ -1,0 +1,5 @@
+C:\Users\nicol\OneDrive\Documenti\Work\Projects\jrs\jrsdb\bin\Release\jrsdb.dacpac
+C:\Users\nicol\OneDrive\Documenti\Work\Projects\jrs\jrsdb\bin\Release\jrsdb.dll
+C:\Users\nicol\OneDrive\Documenti\Work\Projects\jrs\jrsdb\bin\Release\jrsdb.pdb
+C:\Users\nicol\OneDrive\Documenti\Work\Projects\jrs\jrsdb\obj\Release\jrsdb.dll
+C:\Users\nicol\OneDrive\Documenti\Work\Projects\jrs\jrsdb\obj\Release\jrsdb.pdb

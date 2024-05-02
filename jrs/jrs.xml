@@ -1,0 +1,1040 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>jrs</name>
+    </assembly>
+    <members>
+        <member name="M:jrs.Controllers.AnnualPlanDocController.#ctor(jrs.DBContexts.GeneralContext,jrs.DBContexts.IMSLogContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor for the "GenericSqlController" class.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.AnnualPlanDocGeneratorController.#ctor(jrs.DBContexts.GeneralContext,jrs.DBContexts.IMSLogContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor for the "GenericSqlController" class.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.AuthController.Login(System.String,System.String)">
+            <summary>
+            Authentication method
+            </summary>
+            <param name="username">Username</param>
+            <param name="password">Password</param>
+            <returns>a User instance with authentication token</returns>
+        </member>
+        <member name="M:jrs.Controllers.AuthController.loginFromAzure(System.String,System.Boolean)">
+            <summary>
+            Authentication using Microsoft Azure AD
+            </summary>
+            <param name="accountIdentifier">accountIdentifier</param>
+            <param name="useUsername">Defines if the method param "accountIdentifier" is the "userName"</param>
+            <returns>a User instance with authentication token</returns>
+        </member>
+        <member name="M:jrs.Controllers.AuthController.RefreshToken(System.String,System.String)">
+            <summary>
+            Generate and save new JwtToken and RefreshToken returning them to the caller
+            </summary>
+            <param name="token">expired authorization token</param>
+            <param name="refreshToken">user's refresh token</param>
+            <returns>An object in the form { token:string, refreshtoken:string }</returns>
+        </member>
+        <member name="M:jrs.Controllers.BlobStorageAzure.UploadFileToContainer(jrs.Models.FileModel,System.String,System.String,System.String,System.Int32,System.Int32)">
+            <summary>
+            Upload File (New) to Container in Blob Storage Azure (Storage account needed)
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.BlobStorageAzure.UploadOverwriteFileToContainer(jrs.Models.FileModel,System.String,System.String,System.String,System.Guid,System.String)">
+            <summary>
+            Upload File to Container for overwriting of existing file in Blob Storage Azure (Storage account needed)
+            Warming : Same extension of file ( To read after downloading in correctly way)
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.BlobStorageAzure.DownloadFileFromContainer(System.String,System.String,System.String,System.String)">
+            <summary>
+            Download File in Blob Storage Azure 
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.BlobStorageAzure.DeleteFileFromContainer(System.String,System.String)">
+            <summary>
+            DElete file in Blob Storage Azure 
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.BlobStorageAzure.DeleteFileSpecificVersionFromContainer(System.String,System.String,System.String)">
+            <summary>
+            DElete specific version of the file in Blob Storage Azure 
+            </summary>
+        </member>
+        <member name="T:jrs.Controllers.ConfigGenericController">
+            <summary>
+            Controller class for all the generic operations to the DB.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.ConfigGenericController.CopyConfigFromToOffices(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Copy Data from one Office to other Office (specific for JRS configuration stuff)
+            </summary>
+        </member>
+        <member name="T:jrs.Controllers.GenericSqlController">
+            <summary>
+            Controller class for all the generic operations to the DB.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.GenericSqlController.#ctor(jrs.DBContexts.GeneralContext,jrs.DBContexts.IMSLogContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor for the "GenericSqlController" class.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.GenericSqlController.GenericSelect(jrs.Models.GenericSqlSelectPayload)">
+            <summary>
+            Execute a query to the given view with the provided parameters.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.GenericSqlController.GenericSPCall(jrs.Models.GenericSqlPayload)">
+            <summary>
+            Execute a SP with the given payload.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.GenericSqlController.GenericSelectStructure(jrs.Models.GenericSqlSelectPayload)">
+            <summary>
+            Return the structure of the request Table/View.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.GenericSqlController.DownloadDoc">
+            <summary>
+            Generate and download .docx file from the requested html.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.GMTController.#ctor(jrs.DBContexts.GeneralContext,jrs.DBContexts.IMSLogContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor for the "GenericSqlController" class.
+            </summary>
+        </member>
+        <member name="T:jrs.Controllers.HrOfficeController">
+            <summary>
+            Controller class for all SFIP objects.
+            </summary>
+        </member>
+        <member name="T:jrs.Controllers.ImsQuestionnaireController">
+            <summary>
+            Controller class for all the questionnaires.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.ImsQuestionnaireController.#ctor(jrs.DBContexts.GeneralContext,jrs.DBContexts.IMSLogContext)">
+            <summary>
+            Constructor for the "ImsTemplateController" class.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.ImsQuestionnaireController.GetImsQuestionnaire(System.Int32)">
+             <summary>Get Questionnaire</summary>
+             <param name="officeId">ID of the current office used to filter the returned questionnaires.</param>
+            <returns>List of requested questionnaires.</returns>
+        </member>
+        <member name="M:jrs.Controllers.ImsQuestionnaireController.GetImsQuestionnaireById(System.Int32,System.Int32)">
+             <summary>Get Questionnaire</summary>
+             <param name="officeId">ID of the current office used to filter the returned questionnaires.</param>
+             <param name="questionnaireId">ID of the questionnaire to recover.</param>
+            <returns>List of requested questionnaires.</returns>
+        </member>
+        <member name="M:jrs.Controllers.ImsQuestionnaireController.GetImsQuestionnaireByCode(System.Int32,System.String)">
+             <summary>Get Questionnaire</summary>
+             <param name="officeId">ID of the current office used to filter the returned questionnaires.</param>
+             <param name="questionnaireCode">Code of the questionnaire to recover.</param>
+            <returns>List of requested questionnaires.</returns>
+        </member>
+        <member name="M:jrs.Controllers.ImsQuestionnaireController.PostImsQuestionnaireQuestion(System.Int32,jrs.Models.ImsQuestionnaireQuestion[])">
+            <summary>Update Questionnaire-Question</summary>
+            <param name="questionnaireId">Id of the questionnaire referenced by the question configuration.</param>
+            <param name="qqList">Array of Questionnaire-Question configurations.</param>
+        </member>
+        <member name="M:jrs.Controllers.ImsQuestionnaireController.GetQuestionnaireTabList(System.Int32,System.Int32)">
+             <summary>Get Tabs for the requested Questionnaire</summary>
+             <param name="officeId">ID of the current office used to filter the questionnaires.</param>
+             <param name="questionnaireId">Questionnaire to retrieve Tabs for.</param>
+            <returns>List of requested questionnaires.</returns>
+        </member>
+        <member name="M:jrs.Controllers.ImsQuestionnaireController.GetImsQuestionnaireInstance(System.Int32,System.Int32)">
+             <summary>Get Questionnaire Instances</summary>
+             <param name="officeId">ID of the current office used to filter the returned questionnaires.</param>
+             <param name="questionnaireId">ID of the questionnaire to recover instances for.</param>
+            <returns>List of requested questionnaire instances with the related anwers.</returns>
+        </member>
+        <member name="M:jrs.Controllers.ImsQuestionnaireController.GetImsQuestionnaireInstanceWithConditions(System.Int32,System.Int32,jrs.Models.GenericConditionRule[])">
+             <summary>Retrieve Questionnaire Instances</summary>
+             <param name="officeId">ID of the current office used to filter the returned questionnaires.</param>
+             <param name="questionnaireId">ID of the questionnaire to recover instances for.</param>
+             <param name="conditionRules">Array of conditions.</param>
+            <returns>List of requested questionnaire instances with the related anwers.</returns>
+        </member>
+        <member name="M:jrs.Controllers.ImsQuestionnaireController.GetImsQuestionnaireInstance(System.Int32)">
+             <summary>Get Questionnaire Instance</summary>
+             <param name="questionnaireInstanceId">ID of the questionnaire-instance to recover.</param>
+            <returns>The requested questionnaire instance with the related anwers.</returns>
+        </member>
+        <member name="T:jrs.Controllers.ImsTemplateController">
+            <summary>
+            Controller class for all the Document Template operations.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.ImsTemplateController.#ctor(jrs.DBContexts.GeneralContext,jrs.DBContexts.IMSLogContext,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Constructor for the "ImsTemplateController" class.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.ImsTemplateController.GetImsTemplateTypeForTemplate(System.Int32)">
+            <summary>Get ImsTemplateType for the provided template id.</summary>
+        </member>
+        <member name="M:jrs.Controllers.ImsTemplateController.MergedText(System.Int32,System.String)">
+            <summary>
+             Generate an OpenXml Word document based on the defined text in an IMS_TEMPLATE replacing data with a specific query condition.
+            </summary>
+            <returns>Byte array representing the generate OpenXml Word document.</returns>
+             <param name="templateId">ID of the IMS_TEMPLATE to use for generating the document document.</param>
+             <param name="queryCondition">Query string to apply to the template data query.</param>
+        </member>
+        <member name="M:jrs.Controllers.ImsTemplateController.CreateAndDownloadExcelForTable(jrs.Models.GenericExelSelectPayload)">
+            <summary>
+             Generate an OpenXml Excel document based on the defined data query and column labels.
+            </summary>
+            <returns>Byte array representing the generate OpenXml Excel document.</returns>
+             <param name="exelSelectPayload">Parameters including query information for data and column label translations.</param>
+        </member>
+        <member name="M:jrs.Controllers.ImsTemplateController.CreateAndDownloadExcelForQuestionnaire(System.Int32,jrs.Models.GenericExelSelectPayload)">
+            <summary>
+             Generate an OpenXml Excel document based on the structure and results of Questionnaires.
+            </summary>
+            <returns>Byte array representing the generate OpenXml Excel document.</returns>
+            <param name="questionnaireId">Id of the questionnaire to get results for.</param>
+            <param name="exelSelectPayload">Excel query condition object. NOTE: Only "conditionRules" and "columnLabels" will be considered.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:jrs.Controllers.ImsTemplateController.CreateAndDownloadExcelFromSP(jrs.Models.ExcelStoredProcedurePayload)" -->
+        <member name="T:jrs.Controllers.SfipPlanController">
+            <summary>
+            Controller class for all SFIP objects.
+            </summary>
+        </member>
+        <member name="M:jrs.Controllers.SfipPlanController.GetSfipPlanTree(System.Int32,System.Int32,System.Boolean)">
+            <summary>Get Plan Tree starting from Priority Set to Indicator.</summary>
+        </member>
+        <member name="M:jrs.Controllers.SfipPlanController.getPlanChildTree(System.Int32,System.Collections.Generic.List{System.Int32},System.Int32,System.Boolean)">
+             <summary>Calculate the plan structure for a given plan, based on office visibility.</summary>
+             <param name="planId">Plan to retrieve Tabs for.</param>
+             <param name="validOfficeIds">List of office ids (current and descendants) to determine indicator visibility.</param>
+             <param name="currentOfficeId">Current office of the user to determine activity visibility.</param>
+             <param name="includeActivities">Specify if Activities should be included in the tree.</param>
+            <returns>List Priority Sets and children, drescribing the Plan structure.</returns>
+        </member>
+        <member name="M:jrs.Controllers.TestController.Get">
+            <summary>
+            Test method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:jrs.DA.DalBase">
+            <summary>
+            Class DalBase
+            </summary>
+        </member>
+        <member name="M:jrs.DA.DalBase.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:jrs.DA.DalBase"/> class.
+            </summary>
+        </member>
+        <member name="M:jrs.DA.DalBase.Finalize">
+            <summary>
+            Finalizes an instance of the <see cref="T:jrs.DA.DalBase"/> class.
+            </summary>
+        </member>
+        <member name="P:jrs.DA.DalBase.Connection">
+            <summary>
+            Gets or sets the connection.
+            </summary>
+            <value>The connection.</value>
+        </member>
+        <member name="P:jrs.DA.DalBase.Command">
+            <summary>
+            Gets or sets the command.
+            </summary>
+            <value>The command.</value>
+        </member>
+        <member name="P:jrs.DA.DalBase.DataReader">
+            <summary>
+            Gets or sets the data reader.
+            </summary>
+            <value>The data reader.</value>
+        </member>
+        <member name="M:jrs.DA.DalBase.OpenConnection">
+            <summary>
+            Opens the connection.
+            </summary>
+        </member>
+        <member name="M:jrs.DA.DalBase.CloseConnection">
+            <summary>
+            Closes the connection.
+            </summary>
+        </member>
+        <member name="M:jrs.DA.DalBase.ExecuteCommand">
+            <summary>
+            Executes the command.
+            </summary>
+            <returns>System.Int32.</returns>
+            <exception cref="T:System.NullReferenceException">Object Command cannot be null.</exception>
+        </member>
+        <member name="M:jrs.DA.DalBase.ExecuteDataReader">
+            <summary>
+            Executes the data reader.
+            </summary>
+            <exception cref="T:System.NullReferenceException">Object Command cannot be null.</exception>
+        </member>
+        <member name="M:jrs.DA.DalBase.CloseDataReader">
+            <summary>
+            Closes the data reader.
+            </summary>
+        </member>
+        <member name="M:jrs.DA.DalBase.HasRows">
+            <summary>
+            Determines whether this instance has rows.
+            </summary>
+            <returns><c>true</c> if this instance has rows; otherwise, <c>false</c>.</returns>
+        </member>
+        <member name="M:jrs.DA.DalBase.CreateCommand">
+            <summary>
+            Creates the command.
+            </summary>
+            <exception cref="T:System.Exception">
+            Impossibile creare l'oggetto Command se non si dispone di una connessione valida
+            or
+            Impossibile creare l'oggetto Command se non si dispone di una connessione valida
+            </exception>
+        </member>
+        <member name="M:jrs.DA.DalBase.AddParameter(System.Data.Common.DbParameter@,System.Data.ParameterDirection,System.Data.DbType,System.String,System.Object)">
+            <summary>
+            Adds the parameter.
+            </summary>
+            <param name="parameter">The parameter.</param>
+            <param name="parameterDirection">The parameter direction.</param>
+            <param name="parameterType">Type of the parameter.</param>
+            <param name="parameterName">Name of the parameter.</param>
+            <param name="parameterValue">The parameter value.</param>
+            <exception cref="T:System.NullReferenceException">Object Command cannot be null.</exception>
+        </member>
+        <member name="T:jrs.DA.DalCategoryOfIntervention">
+            <summary>
+            Class DalCategoryOfIntervention
+            </summary>
+            <summary>
+            Class DalCategoryOfIntervention
+            </summary>
+        </member>
+        <member name="T:jrs.DBContexts.ApiLogDbContext">
+            <summary>
+            Class to handle api call log
+            </summary>
+        </member>
+        <member name="P:jrs.DBContexts.ApiLogDbContext.JRSApiLogs">
+            <summary>
+            log table
+            </summary>
+        </member>
+        <member name="M:jrs.Models.BlobUploadDto.ToString">
+            <summary>
+            Generates a string representation of the GenericSqlPayload instance.
+            </summary>
+            <returns>
+            The string representation of the object.
+            </returns>
+        </member>
+        <member name="M:jrs.Models.BlobPayload.ToString">
+            <summary>
+            Generates a string representation of the GenericSqlPayload instance.
+            </summary>
+            <returns>
+            The string representation of the object.
+            </returns>
+        </member>
+        <member name="T:jrs.Models.ProcedureParameter">
+            <summary>
+            Class defining the required payload for generic excel creation based on SP.
+            </summary>
+        </member>
+        <member name="T:jrs.Models.GenericExelSelectPayload">
+            <summary>
+            Class defining the required payload for generic excel creation based on sql queried data.
+            </summary>
+        </member>
+        <member name="T:jrs.Models.GenericExcelColumnLabel">
+            <summary>
+            Class defining labels for JrsTable columns.
+            </summary>
+        </member>
+        <member name="T:jrs.Models.GenericSqlPayload">
+            <summary>
+            Payload for generic sql execution of SP.
+            </summary>
+        </member>
+        <member name="T:jrs.Models.GenericSqlPayload.SqlActionType">
+            <summary>Type of actions for sql SP.</summary>        
+        </member>
+        <member name="F:jrs.Models.GenericSqlPayload.SqlActionType.Create">
+            <summary>Creation of new row/rows.</summary>
+        </member>
+        <member name="F:jrs.Models.GenericSqlPayload.SqlActionType.Update">
+            <summary>Update of row/rows.</summary>
+        </member>
+        <member name="F:jrs.Models.GenericSqlPayload.SqlActionType.Destroy">
+            <summary>Deletion of row/rows.</summary>
+        </member>
+        <member name="F:jrs.Models.GenericSqlPayload.SqlActionType.Execute">
+            <summary>Execution of complet SP with multiple operations.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlPayload.spName">
+            <summary>Name of SP to execute.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlPayload.actionType">
+            <summary>Tye of action for the selected SP.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlPayload.jsonPayload">
+            <summary>Payload in JSON format to be used by the SP.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlPayload.userUid">
+            <summary>UID of the user that initiated the action.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlPayload.officeId">
+            <summary>ID of the active office of the user that initiated the action.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlPayload.currentLocale">
+            <summary>The users current locale</summary>
+        </member>
+        <member name="M:jrs.Models.GenericSqlPayload.ToString">
+            <summary>
+            Generates a string representation of the GenericSqlPayload instance.
+            </summary>
+            <returns>
+            The string representation of the object.
+            </returns>
+        </member>
+        <member name="T:jrs.Models.GenericSqlSelectPayload">
+            <summary>
+            Class defining the required payload for generic sql select calls.
+            </summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlSelectPayload.viewName">
+            <summary>Name of db view to query.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlSelectPayload.colList">
+            <summary>List of names of specific columns to query. If not defined, all columns are returned.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlSelectPayload.whereCond">
+            <summary>Where condition to be applied to query.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlSelectPayload.orderStmt">
+            <summary>Ordering criteria of query.</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlSelectPayload.itemNumber">
+            <summary>Number of items to recover</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlSelectPayload.skipNumber">
+            <summary>Number of items to skip</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlSelectPayload.officeId">
+            <summary>Office to filter dataset</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlSelectPayload.currentLocale">
+            <summary>The users current locale</summary>
+        </member>
+        <member name="P:jrs.Models.GenericSqlSelectPayload.ignoreOfficeFilter">
+            <summary>Enables the possibility to override the office filter when querying the data</summary>
+        </member>
+        <member name="T:jrs.Models.GenericConditionRule">
+            <summary>
+            Class defining a rule that is part of a more complex query "where" condition.
+            </summary>
+        </member>
+        <member name="M:jrs.Models.GenericConditionRule.ToString">
+            <summary>
+            Generates a string representation of the GenericConditionRule instance.
+            </summary>
+            <returns>
+            The string representation of the object.
+            </returns>        
+        </member>
+        <member name="M:jrs.Models.ImsLookup.GetLookupsForType(System.String,jrs.DBContexts.GeneralContext)">
+            <summary>
+             Returns a list of lookups based on the LookupType code
+            </summary>
+             <param name="typeCode">String of the type of lookups to recover.</param>
+             <param name="cntx">DbContext to use to query the DB.</param>
+        </member>
+        <member name="M:jrs.Models.ImsLookup.GetLookupsForType(System.String[],jrs.DBContexts.GeneralContext)">
+            <summary>
+             Returns a list of lookups based on an Array of LookupType codes
+            </summary>
+             <param name="typeCodes">Array of strings of the types of lookups to recover.</param>
+             <param name="cntx">DbContext to use to query the DB.</param>
+        </member>
+        <member name="P:jrs.Models.ImsUser.ImsUserEmail">
+            <summary>E-mail address used by Microsoft Azure AD</summary>
+        </member>
+        <member name="P:jrs.Models.ImsUser.accountIdentifier">
+            <summary>Account Identifier from Microsoft Azure AD</summary>
+        </member>
+        <member name="P:jrs.Models.ImsUser.ImsUserIsDeleted">
+            <summary>Bit to verify is the user is active or not (logic deletion)</summary>
+        </member>
+        <member name="P:jrs.Models.Menu.ModuleId">
+            <summary>Reference to module</summary>
+        </member>
+        <member name="P:jrs.Models.Menu.ModuleName">
+            <summary>Name of the module</summary>
+        </member>
+        <member name="P:jrs.Models.Menu.ModuleCode">
+            <summary>Code of the module</summary>
+        </member>
+        <member name="P:jrs.Models.Menu.isHidden">
+            <summary>
+             Defines a hidden menu item.
+             The menu will not be accessible through the navigation tree.
+            </summary>
+        </member>
+        <member name="M:jrs.Models.NavPayload.ToString">
+            <summary>
+            Generates a string representation of the GenericSqlPayload instance.
+            </summary>
+            <returns>
+            The string representation of the object.
+            </returns>
+        </member>
+        <member name="M:jrs.Services.BlobStorageService.GetRandomBlobName(System.String,System.Guid)">
+            <summary> 
+            string GetRandomBlobName(string filename): Generates a unique random file name to be uploaded  
+            </summary> 
+        </member>
+        <member name="M:jrs.Services.CryptoService.GetHash(System.String)">
+            <Summary>
+             Returns the Hash conversion of the given string using sha256 cryptographic hash functions.
+            </Summary>
+        </member>
+        <member name="M:jrs.Services.DBQueryService.GenericQueryTableStructure(Microsoft.EntityFrameworkCore.DbContext,jrs.Models.GenericSqlSelectPayload)">
+            <summary>Retrieve Jrs Table structure.</summary>
+            <param name="context">DB context to execute query (GeneralContext)</param>
+            <param name="selectPayload">Query conditions</param>
+            <returns>Json string describing the Jrs Table structure.</returns>
+        </member>
+        <member name="M:jrs.Services.DBQueryService.GenericQueryTableStructureAndData(Microsoft.EntityFrameworkCore.DbContext,jrs.Models.GenericSqlSelectPayload)">
+            <summary>Retrieve Jrs Table structure and data.</summary>
+            <param name="context">DB context to execute query (GeneralContext)</param>
+            <param name="selectPayload">Query conditions</param>
+            <returns>Json string describing the Jrs Table structure and the requested data.</returns>
+        </member>
+        <member name="M:jrs.Services.DocCreatorService.CreateDocxFromHtml(System.String)">
+            <summary>
+             Creates an OpenXml Word document from the provided HTML string.
+            </summary>
+            <returns>MemoryStream representing the generate OpenXml Word document.</returns>
+             <param name="htmlContent">String of HTML content to be used in the geenrated document.</param>
+        </member>
+        <member name="M:jrs.Services.DocCreatorService.CreateExcel(System.String,jrs.Models.GenericExcelColumnLabel[])">
+            <summary>Generate Excell file based on a JRsTable configuration.</summary>
+            <param  name="jsonTableInfo">
+            Json string strguctured as JrsTable condifgurations. I.e: {
+                "columns": [{"column_name":*String*, js_type":*String*}],
+                "table_data": [{*Object*}]
+                "item_count": *Number*
+            }
+            </param>
+            <param  name="columnLabels">Password</param>
+            <returns>MemoryStream representation of the created file</returns>
+        </member>
+        <member name="M:jrs.TokenService.GetToken(jrs.Models.ImsUser)">
+            <summary>
+            Generates authentication token
+            </summary>
+            <param name="user">ImsUser for which to generate an authentication token</param>
+            <returns>Authentication token</returns>
+        </member>
+        <member name="M:jrs.TokenService.GetPrincipalFromExpiredToken(System.String)">
+            <summary>
+            Extracts user information from expired JWT token in the form of a ClaimsPrincipal
+            </summary>
+            <param name="token">The expired token to retrieve data from</param>
+            <returns>User information</returns>
+        </member>
+        <member name="T:NavDimension.PMEDimensionValueStaging">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Key">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Entry_No">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Entry_NoSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Dimension_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Name">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Blocked">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Global_Dim_No">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Last_Modified_Date_Time">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Mapp_Cat_of_Interv">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Cat_of_Interv">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Project_city">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Company">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.PME_Guid">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Process_Manually">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Process_ManuallySpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Entered_in_NAV">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Entered_in_NAVSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Ignored">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.IgnoredSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Date_and_time_entered_by_PME">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Date_and_time_entered_by_PMESpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.NAV_Processing_date_time">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.NAV_Processing_date_timeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Version_No">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Version_NoSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Added_in_Master">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Added_in_MasterSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Added_in_Slave_Companies">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Added_in_Slave_CompaniesSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Is_Blocked_in_Master_Company">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Is_Blocked_in_Master_CompanySpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Is_Blocked_in_Slave_Company">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Is_Blocked_in_Slave_CompanySpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Master_Company_name">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Transaction_Errors">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging.Transaction_ErrorsSpecified">
+            <remarks/>
+        </member>
+        <member name="T:NavDimension.PMEDimensionValueStaging_Filter">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging_Filter.Field">
+            <remarks/>
+        </member>
+        <member name="P:NavDimension.PMEDimensionValueStaging_Filter.Criteria">
+            <remarks/>
+        </member>
+        <member name="T:NavDimension.PMEDimensionValueStaging_Fields">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Entry_No">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Dimension_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Name">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Blocked">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Global_Dim_No">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Last_Modified_Date_Time">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Mapp_Cat_of_Interv">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Cat_of_Interv">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Project_city">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Company">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.PME_Guid">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Process_Manually">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Entered_in_NAV">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Ignored">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Date_and_time_entered_by_PME">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.NAV_Processing_date_time">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Version_No">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Added_in_Master">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Added_in_Slave_Companies">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Is_Blocked_in_Master_Company">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Is_Blocked_in_Slave_Company">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Master_Company_name">
+            <remarks/>
+        </member>
+        <member name="F:NavDimension.PMEDimensionValueStaging_Fields.Transaction_Errors">
+            <remarks/>
+        </member>
+        <member name="T:NavGLBudget.PMEGLBudgetEntryStaging">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Key">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Entry_No">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Entry_NoSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Name">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_G_L_Account_No">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Date">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Global_Dimension_1_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Global_Dimension_2_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Amount">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Description">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_1_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_2_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_3_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_4_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_5_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_6_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_7_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_8_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_9_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_10_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_11_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_12_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_13_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Budget_Dimension_14_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Unit_of_Measure_Code">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Quantity">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Unit_Cost_LCY">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Entry_No">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Last_Date_Modified">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Deleted">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.PME_Company">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Process_manually">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Process_manuallySpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Entered_in_NAV">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Entered_in_NAVSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Ignored">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.IgnoredSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.date_and_time_entered_by_PME">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.date_and_time_entered_by_PMESpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.NAV_Processing_date_time">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.NAV_Processing_date_timeSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Version_No">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Version_NoSpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Processed_in_Slave_Company">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Processed_in_Slave_CompanySpecified">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Transaction_Errors">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging.Transaction_ErrorsSpecified">
+            <remarks/>
+        </member>
+        <member name="T:NavGLBudget.PMEGLBudgetEntryStaging_Filter">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging_Filter.Field">
+            <remarks/>
+        </member>
+        <member name="P:NavGLBudget.PMEGLBudgetEntryStaging_Filter.Criteria">
+            <remarks/>
+        </member>
+        <member name="T:NavGLBudget.PMEGLBudgetEntryStaging_Fields">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.Entry_No">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Name">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_G_L_Account_No">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Date">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Global_Dimension_1_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Global_Dimension_2_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Amount">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Description">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_1_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_2_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_3_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_4_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_5_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_6_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_7_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_8_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_9_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_10_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_11_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_12_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_13_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Budget_Dimension_14_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Unit_of_Measure_Code">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Quantity">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Unit_Cost_LCY">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Entry_No">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Last_Date_Modified">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Deleted">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.PME_Company">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.Process_manually">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.Entered_in_NAV">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.Ignored">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.date_and_time_entered_by_PME">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.NAV_Processing_date_time">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.Version_No">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.Processed_in_Slave_Company">
+            <remarks/>
+        </member>
+        <member name="F:NavGLBudget.PMEGLBudgetEntryStaging_Fields.Transaction_Errors">
+            <remarks/>
+        </member>
+        <member name="T:Core.Api.Infra.Swagger.Filters.ApllyIgnoreRelationshipInNamespace`1">
+            <summary>
+            Apply this filter to ignore all related objects that could cause  a self referencing loop
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Core.Api.Infra.Swagger.Filters.ApllyIgnoreRelationshipInNamespace`1.Apply(Microsoft.OpenApi.Models.OpenApiSchema,Swashbuckle.AspNetCore.SwaggerGen.SchemaFilterContext)">
+            <summary>
+            Required by interface
+            </summary>
+            <param name="schema"></param>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>

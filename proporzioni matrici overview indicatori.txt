@@ -1,0 +1,12 @@
+ho diviso l'header nel numero max di pezzi piccoli (1+6*2)
+una colonna =1 (width)
+6 colonne =2 (width)
+
+body
+
+ho diviso l'header nel numero max di pezzi piccoli (1+6*2)
+una colonna = 1 (width) la prima
+
+ho diviso l'header nel num colonne = 6
+
+1/6 la prima colonna, i 5.6 le restanti altre.

@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "jrs": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5000/swagger/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_ALLOWED_CORS": "https://localhost:8080;http://localhost:8080;http://localhost:5000;https://localhost:5000",
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      },
+      "applicationUrl": "http://localhost:5000/"
+    },
+
+    "test": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5000/swagger/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_ALLOWED_CORS": "https://localhost:8080;http://localhost:8080;http://localhost:5000;https://localhost:5000",
+        "ASPNETCORE_ENVIRONMENT": "test"
+      },
+      "applicationUrl": "http://localhost:5000/"
+    },
+
+
+    "LocalTest": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5000/swagger/index.html",
+      "environmentVariables": {
+        "ASPNETCORE_ALLOWED_CORS": "https://localhost:8080;http://localhost:8080;http://localhost:5000;https://localhost:5000",
+        "ASPNETCORE_ENVIRONMENT": "LocalTest"
+      },
+      "applicationUrl": "http://localhost:5000/"
+    },
+
+    "jrsProd": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "",
+      "environmentVariables": {
+        "ASPNETCORE_ALLOWED_CORS": "http://w2012.blogic.it/jrsapp;https://w2012.blogic.it/jrsapp",
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      } //,
+      //"applicationUrl": "https://w2012.blogic.it/jrs"
+    }
+  }
+}

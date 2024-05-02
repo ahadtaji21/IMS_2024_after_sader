@@ -1,0 +1,5 @@
+{
+    "VUE_APP_CLIENT_ID": "5a050909-c0c6-4e39-8b03-734db1e63383",
+    "VUE_APP_TENANT_ID": "5759d742-e295-4457-b9da-e23691927426",
+    "VUE_APP_REDIRECT_URI": "https://imsdev.jrs.net/jrsapp"
+}

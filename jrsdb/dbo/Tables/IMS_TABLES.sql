@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[IMS_TABLES] (
+    [ID]                    INT           IDENTITY (1, 1) NOT NULL,
+    [TABLE_NAME]            VARCHAR (128) NOT NULL,
+    [CREATE_SP_NAME]        VARCHAR (128) NULL,
+    [READ_SP_NAME]          VARCHAR (128) NULL,
+    [UPDATE_SP_NAME]        VARCHAR (128) NULL,
+    [DELETE_SP_NAME]        VARCHAR (128) NULL,
+    [TITLE_TRANSLATION_KEY] NVARCHAR (50) NULL,
+    PRIMARY KEY CLUSTERED ([ID] ASC)
+);
+

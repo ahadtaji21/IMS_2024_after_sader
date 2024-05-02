@@ -1,0 +1,44 @@
+﻿
+CREATE VIEW [dbo].[IMS_VI_TABLE_COLUMN_DETAILS]
+AS
+/***********************************************************
+* Description: List column for existing IMS_TABLES.
+* Date:   2020-04-06
+* Author: n.migliore
+*
+* Changes
+* Date		Modified By			Comments
+************************************************************
+*   2020-04-09      n.migliore      Added "FORM_FIELD_TYPE"
+************************************************************/
+
+SELECT  ROW_NUMBER() OVER(ORDER BY COL.TABLE_NAME, COL.COLUMN_NAME) AS COLUMNS_ROW_ID,
+    COL.TABLE_NAME, 
+    COL.COLUMN_NAME, 
+    CASE WHEN DET.ID IS NOT NULL THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT) END AS DETAILS_IS_DEFINED,
+    DET.ID,
+    DET.TABLE_ID, 
+    DET.TRANSLATION_KEY,
+    DET.HINT, 
+    DET.HINT_TRANSLATION_KEY,
+    DET.FORM_FIELD_TYPE,
+    DET.IS_PK, 
+    DET.HIDE_IN_LIST, 
+    DET.HIDE_IN_FORM, 
+    DET.READONLY, 
+    DET.REQUIRED,
+    DET.SELECT_IS_MULTIPLE,
+    DET.SELECT_ITEMS_DATASOURCE, 
+    DET.SELECT_ITEM_KEY, 
+    DET.SELECT_ITEM_TEXT, 
+    DET.SELECT_ITEMS_DATASOURCE_CONDITION, 
+    DET.SELECT_ITEMS_LOOKUP_TYPE_CODE, 
+    DET.SELECT_ITEMS_ORDER_CONDITION,
+    DET.TAB_CODE,
+	DET.TAB_TRANSL_KEY
+FROM INFORMATION_SCHEMA.COLUMNS AS COL
+    LEFT JOIN dbo.IMS_TABLE_COLUMN_DETAILS AS DET ON DET.TABLE_NAME = COL.TABLE_NAME
+                                                    AND DET.COLUMN_NAME = COL.COLUMN_NAME
+WHERE EXISTS(   SELECT 1
+                FROM IMS_TABLES AS T
+                WHERE T.TABLE_NAME = COL.TABLE_NAME);

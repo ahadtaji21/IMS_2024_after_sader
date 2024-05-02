@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>jrsdb</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{5bfaae26-0e43-495a-850d-c9ac0805b049}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql110DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>jrsdb</RootNamespace>
+    <AssemblyName>jrsdb</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="Security\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\MENU.sql" />
+    <Build Include="Security\jrsuser.sql" />
+    <Build Include="Security\jrsuser_1.sql" />
+    <Build Include="Security\RoleMemberships.sql" />
+    <Build Include="dbo\Tables\LOG.sql" />
+    <Build Include="dbo\Tables\TEST.sql" />
+    <Build Include="dbo\Stored Procedures\sp_SEL_GetDataFromTest.sql" />
+    <Build Include="dbo\Tables\TEST_DEPARTMENT_1.sql" />
+    <Build Include="dbo\Tables\IMS_USER.sql" />
+    <Build Include="dbo\Tables\IMS_STATUS_CLASS_1.sql" />
+    <Build Include="dbo\Tables\IMS_STATUS_1.sql" />
+    <Build Include="dbo\Tables\IMS_LABELS.sql" />
+    <Build Include="dbo\Tables\HR_TITLE_SCOPE_1.sql" />
+    <Build Include="dbo\Tables\HR_TITLE_LEVEL_1.sql" />
+    <Build Include="dbo\Tables\HR_TITLE_FUNCTION_1.sql" />
+    <Build Include="dbo\Tables\HR_POSITION_1.sql" />
+    <Build Include="dbo\Tables\HR_PERSONAL_TITLE.sql" />
+    <Build Include="dbo\Tables\HR_PAYGRADE_1.sql" />
+    <Build Include="dbo\Tables\HR_GENDER.sql" />
+    <Build Include="dbo\Tables\HR_DOCUMENT_TYPE.sql" />
+    <Build Include="dbo\Tables\HR_DEPARTMENT_1.sql" />
+    <Build Include="dbo\Tables\HR_BIODATA.sql" />
+    <Build Include="dbo\Tables\HR_AGREEMENT_TYPE.sql" />
+    <Build Include="dbo\Tables\IMS_LOCATION.sql" />
+    <Build Include="dbo\Tables\IMS_ADMIN_AREA_TYPE.sql" />
+    <Build Include="dbo\Tables\IMS_ADMIN_AREA.sql" />
+    <Build Include="dbo\Stored Procedures\SP_INS_ADMIN_AREA.sql" />
+    <Build Include="dbo\Tables\IMS_USER_ROLE.sql" />
+    <Build Include="dbo\Tables\IMS_USER_RIGHTS.sql" />
+    <Build Include="dbo\Tables\IMS_ROLE_MENU.sql" />
+    <Build Include="dbo\Tables\IMS_PROJECT.sql" />
+    <Build Include="dbo\Tables\HR_DOCUMENT.sql" />
+    <Build Include="dbo\Tables\HR_AGREEMENT.sql" />
+    <Build Include="dbo\Stored Procedures\SP_SEL_MENU_FOR_USER.sql" />
+    <Build Include="dbo\Stored Procedures\SP_INS_USER_BIODATA.sql" />
+    <Build Include="dbo\Stored Procedures\SP_INS_LOG_EVENT.sql" />
+    <Build Include="dbo\Stored Procedures\SP_INS_LOG_ERROR.sql" />
+    <Build Include="dbo\Stored Procedures\SP_INS_BIODATA_4.sql" />
+    <Build Include="dbo\Tables\PMS_CATEGORY_OF_INTERVENTION_1.sql" />
+    <Build Include="dbo\Tables\IMS_LOOKUP_TYPE.sql" />
+    <Build Include="dbo\Tables\IMS_LOOKUP.sql" />
+    <Build Include="dbo\Tables\IMS_LOGEVENTS.sql" />
+    <Build Include="dbo\Tables\IMS_LOGERRORS.sql" />
+    <Build Include="dbo\Tables\IMS_LANGUAGE_1.sql" />
+    <Build Include="dbo\Tables\HR_OFFICE_1.sql" />
+    <Build Include="dbo\Views\VI_IMS_LOCATION_DESCRIPTIVE_4.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="jrsdb.publish.xml" />
+    <None Include="SqlSchemaCompare.scmp" />
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>

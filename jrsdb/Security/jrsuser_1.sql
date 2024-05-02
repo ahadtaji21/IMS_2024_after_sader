@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [jrsuser]
+    WITH PASSWORD = N'%xwSpbAal8h_lJ9nr|Ixag}vmsFT7_&#$!~<hm{jhlpcgPM~', SID = 0x048665D904B134489057B127FD2BFF33, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+

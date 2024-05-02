@@ -1,0 +1,678 @@
+
+/*--- Capitalize the first letter of the content ---*/
+.capital-first-letter::first-letter {
+    text-transform: uppercase;
+}
+
+.inputfield {
+    font-size: 14px;
+    width: 200px;
+    background-color: whitesmoke;
+    border-width: 1px;
+}
+
+.headerStyleGapGrid {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    background-color: #4e76aa;
+}
+
+.headerStyleGapGridLevel1 {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    background-color: #4998ff;
+}
+
+.mappingDetailsGrid {
+    padding: 0px !important;
+    background-color: white;
+    border-left-width: 1px;
+    border-left-style: solid;
+    border-left-color: red;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.mappingDonorGrid {
+    padding: 0px !important;
+    border-top-style: none;
+    border-top-width: 0px;
+    background-color: whitesmoke
+}
+
+.divideWithBorders {
+    border: 1px;
+    border-style: solid;
+    border-color: darkgray;
+    border-top-width: 0px;
+    border-top-style: none;
+}
+
+.headerStyleGapGridNoBorders {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    background-color: #4e76aa;
+}
+
+.headerStyle {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #4e76aa;
+}
+
+.rowStyle {
+    color: gray;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    padding: 0px;
+    margin: 0px;
+}
+
+.rowStyleModified {
+    color: gray;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+    padding: 0px;
+    margin: 0px;
+}
+
+.GapCell {
+    background-color: #FF6262;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    border-style: none;
+    padding: 0px;
+    height: 100%;
+    margin: 0px;
+}
+
+.NoGapCell {
+    background-color: #28B79B;
+    color: white;
+    font-size: 12px;
+    border-style: none;
+    font-weight: bold;
+    padding: 0px;
+    height: 100%;
+    margin: 0px;
+}
+
+.OverGapCell {
+    background-color: lightyellow;
+    color: black;
+    font-size: 12px;
+    border-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.AlertCell {
+    background-color: lightyellow;
+    color: black;
+    font-size: 12px;
+    border-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.dataStyle {
+    color: gray;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    padding: 0px;
+    margin: 0px;
+}
+
+.dataStyleLevel1 {
+    color: gray;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.dataStyleBlack {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.dataStyleClear {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    padding: 0px;
+    margin: 0px;
+}
+
+.rowStyleNoPadUD {
+    padding-bottom: 0px;
+    padding-top: 0px;
+    border: thin;
+}
+
+.dataStyleGreen {
+    color: green;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.dataStyleRed {
+    color: red;
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.vlabel {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: 0px;
+    border-style: none;
+    padding-left: 4px;
+    margin: 0px;
+    background-color: #4e76aa;
+}
+
+.colStyleCompact {
+    margin: 0px;
+    padding: 0px;
+}
+
+.rowStyleBB {
+    /* margin: 0px;
+    padding:0px; */
+    border-bottom-color: #4e76aa;
+    border-bottom-style: solid;
+}
+
+.headerStyleNoExtBorder {
+    /* margin: 0px;
+    padding:0px; */
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+}
+
+.headerStyleNoExtBorder {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 12px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #4e76aa;
+    border-bottom: none;
+    border-top: none;
+    border-left: none;
+}
+
+.headerStyleNoExtBorder1 {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: none;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #4e76aa;
+}
+
+
+.headerStyleNoLeftB {
+    color: white;
+    font-family: "Montserrat";
+    font-size: 14px;
+    border: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    padding: 0px;
+    margin: 0px;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #4e76aa;
+    border-left: none;
+}
+
+.v-data-table-header th {
+    font-size: 14px !important;
+    color: #214885 !important;
+    /*  color: red;  Your desired header color 
+     Additional CSS styles for the headers */
+}
+
+.v-data-table > .v-data-table__wrapper > table > tbody > tr > td {
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    color: #214885;
+    /*   color: red;  Your desired headercolor 
+     Additional CSS styles for the headers */
+}
+
+.v-data-table > jrs-table-top {
+    background-color: #039BE5 !important
+}
+
+.v-icon {
+    color: #214885 
+}
+
+.v-data-footer {
+    background-color: #42a5f5 !important;
+    color: white !important
+}
+
+.v-data-footer__select .v-select__selections {
+    color: white !important;
+}
+
+.mdi-chevron-left {
+    color: white !important;
+}
+
+.mdi-chevron-right {
+    color: white !important;
+}
+
+.v-app-bar__nav-icon {
+    color: white !important;
+}
+    /* Target the navigation icon with class 'mdi-menu' inside the 'v-app-bar__nav-icon' button */
+    .v-app-bar__nav-icon .mdi-menu {
+        color: white !important;
+    }
+/* Target the text elements inside the 'v-input__control' class and set their color to white */
+/*.v-input__control {
+    color: white !important;
+}*/
+
+/*.mdi-menu-down {
+    color: white !important;
+}
+.mdi-menu-up{
+    color: white !important
+}
+.footer-container .mdi-menu-down {
+    color: white !important;
+}*/
+
+/* Set table layout to auto for dynamic column widths */
+/*table {
+    table-layout: auto !important;
+}*/
+.custom-width-column {
+    min-width: 150px; /* Adjust the width value as needed */
+}
+
+div.d-inline-flex.align-center.primary.lighten-2.jrs-table-top {
+    background-color: #42a5f5 !important; /* Replace with any desired light-blue darken-1 color code */
+}
+
+    div.d-inline-flex.align-center.primary.lighten-2.jrs-table-top h3 {
+        color: white !important;
+    }
+
+div.d-flex.flex-wrap.align-center.primary.lighten-2.jrs-table-top {
+    background-color: #42a5f5 !important;
+    border: none !important
+}
+
+    div.d-flex.flex-wrap.align-center.primary.lighten-2.jrs-table-top h3 {
+        color: white !important
+    }
+
+.v-icon.notranslate.v-data-table-header__icon.mdi.mdi-arrow-up.theme--light {
+    position: absolute !important
+}
+
+.v-application--is-ltr .v-data-footer__select .v-select {
+    margin: 1px 0 0px 25px;
+}
+
+.v-icon.deep-orange--text.text--darken-3 {
+    color: #DC7D11 !important;
+}
+
+.jrs-table-top button {
+    margin-right: 10px !important;
+    color: #DC7D11 !important;
+}
+
+    .jrs-table-top button .v-icon {
+        color: white !important
+    }
+
+    .jrs-table-top button .v-btn__content {
+        color: white !important
+    }
+
+
+.mdi-circle-edit-outline {
+    font-size: 22px !important;
+    color: #77AA2B !important;
+}
+
+.mdi-delete {
+    font-size: 22px !important;
+    color: #5b616b !important;
+}
+
+.mdi-history {
+    font-size: 22px !important;
+}
+
+.calendar-config {
+    margin-bottom: inherit
+}
+
+.v-calendar-weekly__head-weekday {
+    color: #214885 !important;
+    font-weight: bold
+}
+
+.v-event-summary {
+    background-color: #DC7D11 !important;
+}
+/* Initial card style that includes the logo */
+.custom-card {
+    border-bottom: 5px solid;
+    /* border: none;*/ /* No borders on any side */
+    /*box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2) !important;*/ /* Add shadow for depth */
+    box-shadow: 0 8px 6px -6px rgba(0,0,0,0.2) !important;
+    transition: min-height 0.5s ease;
+    width: 200px; /* Adjust width as necessary */
+    height: auto; /* Adjust height as necessary */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px; /* Space between cards */
+    background-color: white; /* Card background color */
+    position: relative;
+    margin-bottom: 20px; /*delete this maybe*/
+    flex-grow: 0;
+    flex-shrink: 0;
+    /*flex-basis: calc(33.333% - 10px);*/ /* Adjust for 3 cards in a row, minus some margin */
+    /*    transition: flex 0.3s ease;
+*/
+}
+.card-expanded-content {
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    overflow: hidden;
+    max-height: 0; /* Start with collapsed state */
+    opacity: 0; /* Start with hidden content */
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    right: 0;
+    /*z-index: 10;*/ /* Ensure it overlays above other content */
+    background-color: white; /* Or the background color of your cards */
+    width: 100%;/*80%*/
+}
+
+/* When card is expanded */
+.expanded-card .card-expanded-content {
+    max-height: fit-content; /* Adjust as needed for your content */
+    overflow-y: auto;
+    opacity: 1; /* Show content */
+}
+    /* Bottom border for non-expanded cards */
+    /*.custom-card:not(.expanded-card) {
+        border-bottom: 5px solid #E0E0E0;*/
+/*        z-index:1
+*/    /*}*/
+
+.my-Home-Page .col-4 {
+    max-width: 20%;
+    margin-left: 4%
+}
+/* Style for the logo image inside the card */
+.card-content img {
+    /*margin-right: 8px;*/ /* Add some space between the logo and the text */
+    width: 100%; /* Adjust width as needed, or keep it auto */
+    max-width: 150px;
+    height: auto; /* Adjust height as needed */
+}
+.card-content {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; /* Center items horizontally */
+    width: 100%; /* Take full width of the card */
+    height: 200px; /* Adjust the height as needed */
+    text-align: center; /* Center the text */
+}
+.module-name {
+    display: inline; /* Inline display for the text next to the image */
+    vertical-align: middle; /* Align text vertically in the middle */
+    font-size: 1em; /* Adjust the font size as needed */
+}
+
+/* Expanded card styles */
+.expanded-card {
+    height: auto; /* Height adjusts to content */
+    position: relative; /* Adjust position to relative */
+    /*z-index: 5;*/ /* Elevated z-index to lift the card above others */
+    width: 87%;
+    margin:0 auto;
+    /*border-bottom: 5px solid #E0E0E0 !important;*/
+    /*flex-grow: 2;
+    flex-basis: calc(66.666% - 10px);*/ /* Adjust for expanded card size */
+    transition: all 0.5s ease; /*flex-basis 1s ease-in-out, width 1s ease-in-out;*/
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .my-Home-Page {
+        flex-direction: column; /* Stack cards vertically on small screens */
+    }
+}
+
+/* Ensures that the container for the cards allows for absolute positioning */
+.my-Home-Page {
+    position: relative; /* Container must be relative for absolute positioning of children */
+    display: contents; /* Use flex for horizontal alignment */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    align-items: flex-start;
+    justify-content: space-between; /* Adjusts spacing between cards */
+    margin-top: auto;
+}
+    .my-Home-Page .row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start; /* Align items to the start of the container */
+        padding-top: 3%
+    }
+/* Transition group enter/leave animations */
+.card-fade-enter-active, .card-fade-leave-active {
+    transition: all 0.5s ease;
+}
+
+.card-fade-enter, .card-fade-leave-to {
+    opacity: 0;
+    transform: scale(0.95); /* Slightly shrink cards that are entering/leaving */
+}
+
+/* Vue's transition classes */
+.v-enter-active, .v-leave-active {
+    transition: all 0.7s ease;
+}
+
+.v-enter, .v-leave-to /* .v-leave-active in <2.1.8 */ {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* Adjustments for when the card is expanded */
+.expanded-card .module-logo img {
+    /* Optionally adjust the size or remove the size adjustments if you want
+       the logo to stay the same size when the card is expanded */
+}
+
+.card-transition-move {
+    transition: transform 0.5s ease;
+}
+
+/* Enter and leave transitions */
+.card-transition-enter-active, .card-transition-leave-active {
+    transition: all 1s ease-in-out;
+}
+
+.card-transition-enter, .card-transition-leave-to {
+    opacity: 0;
+    transform: translateY(30px); /* Adjust as needed */
+}
+
+.card-expanded-content .v-card__title{
+    word-break: normal;
+}
+
+/* Hover style */
+.custom-card:hover {
+    /* Define your highlight effect here, e.g., a box-shadow or background-color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important; 
+}
+.custom-card:focus {
+    outline: none; /* Removes any outline */
+    box-shadow: none; /* Removes any box shadow */
+    /* Any additional resetting of styles that might be causing the inner shadow */
+}
+
+
+/* Active/Focus style - reset the styles to "remove" highlight effect */
+.custom-card:active,
+.custom-card:focus {
+    /* Reset the styles that you don't want to show when the card is clicked */
+    box-shadow: none;
+    /* If you have other styles on hover that should be removed, reset them here as well */
+    background-color: inherit; /* This is just an example */
+    outline: none; /* Removes the outline that browsers might add on focus */
+}
+
+/* You might want to add a class when the card is clicked to maintain the state */
+.custom-card.clicked {
+    /* Styles for the clicked state */
+    box-shadow: none;
+    /* Any other styles that should apply to the card once it's been clicked */
+}
+
+/* Hover style, but only if the card hasn't been clicked */
+.custom-card:not(.clicked):hover {
+    /* Define your hover effect here */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-card.no-focus:focus {
+    outline: none;
+    box-shadow: none;
+    /* Any other styles to disable focus effect */
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+    margin: 0px; /* Spacing between buttons */
+    height: 56px !important;
+    /*border: none;*/
+    background-color: white; /* Default light grey background */
+    /*color: black !important;*/ /* Text color */
+    font-size: 15px !important;
+    font-weight: 600;
+    /*white-space: normal;*/ /* Allows text to wrap */
+    text-align: left; /* Aligns text to the left */
+    line-height: 1.5; /* Adjust line height for wrapped text if needed */
+    border-radius: 5px; /* Optional rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Optional shadow for depth */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+#ModuleDetialIcon {
+    margin-left: 2%;
+    margin-right: 4%;
+    font-size: 29px;
+}
+
+.module-header {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 32px;
+    font-weight: bold;
+    width: 96%;
+    margin: auto;
+}
+
+.module-header-icon {
+    width: 100px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

@@ -1,0 +1,34 @@
+[33meb4da2ca[m[33m ([m[1;36mHEAD -> [m[1;32mnew-home[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{0}: checkout: moving from new-home to new-home
+[33meb4da2ca[m[33m ([m[1;36mHEAD -> [m[1;32mnew-home[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{1}: checkout: moving from master to new-home
+[33meb4da2ca[m[33m ([m[1;36mHEAD -> [m[1;32mnew-home[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{2}: merge new-home: Fast-forward
+[33m840345bc[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{3}: checkout: moving from new-home to master
+[33meb4da2ca[m[33m ([m[1;36mHEAD -> [m[1;32mnew-home[m[33m, [m[1;32mmaster[m[33m)[m HEAD@{4}: merge master: Merge made by the 'ort' strategy.
+[33m58dc67b1[m[33m ([m[1;31morigin/new-home[m[33m)[m HEAD@{5}: checkout: moving from master to new-home
+[33m840345bc[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{6}: checkout: moving from new-home to master
+[33m58dc67b1[m[33m ([m[1;31morigin/new-home[m[33m)[m HEAD@{7}: checkout: moving from master to new-home
+[33m840345bc[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{8}: checkout: moving from new-home to master
+[33m58dc67b1[m[33m ([m[1;31morigin/new-home[m[33m)[m HEAD@{9}: checkout: moving from master to new-home
+[33m840345bc[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{10}: checkout: moving from new-home to master
+[33m58dc67b1[m[33m ([m[1;31morigin/new-home[m[33m)[m HEAD@{11}: reset: moving to HEAD
+[33m58dc67b1[m[33m ([m[1;31morigin/new-home[m[33m)[m HEAD@{12}: checkout: moving from master to new-home
+[33m840345bc[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{13}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m444963bc[m[33m ([m[1;31morigin/PrintOut_AnnualPlan[m[33m)[m HEAD@{14}: checkout: moving from master to master
+[33m444963bc[m[33m ([m[1;31morigin/PrintOut_AnnualPlan[m[33m)[m HEAD@{15}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m23068564[m HEAD@{16}: checkout: moving from new-home to master
+[33m58dc67b1[m[33m ([m[1;31morigin/new-home[m[33m)[m HEAD@{17}: commit: new home page
+[33m23068564[m HEAD@{18}: checkout: moving from master to new-home
+[33m23068564[m HEAD@{19}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m53926a90[m HEAD@{20}: checkout: moving from nasra-changes2 to master
+[33mf655db54[m[33m ([m[1;31morigin/nasra-changes2[m[33m, [m[1;32mnasra-changes2[m[33m)[m HEAD@{21}: commit: init
+[33m53926a90[m HEAD@{22}: checkout: moving from master to nasra-changes2
+[33m53926a90[m HEAD@{23}: pull --progress --no-edit --no-stat --recurse-submodules=no origin: Fast-forward
+[33m8beef4c7[m HEAD@{24}: checkout: moving from style_design2 to master
+[33m42f48586[m[33m ([m[1;31morigin/style_design2[m[33m, [m[1;32mstyle_design2[m[33m)[m HEAD@{25}: checkout: moving from style_design2 to style_design2
+[33m42f48586[m[33m ([m[1;31morigin/style_design2[m[33m, [m[1;32mstyle_design2[m[33m)[m HEAD@{26}: checkout: moving from nasra-changes to style_design2
+[33m682f9d00[m[33m ([m[1;31morigin/nasra-changes[m[33m, [m[1;32mnasra-changes[m[33m)[m HEAD@{27}: checkout: moving from style_design2 to nasra-changes
+[33m42f48586[m[33m ([m[1;31morigin/style_design2[m[33m, [m[1;32mstyle_design2[m[33m)[m HEAD@{28}: checkout: moving from master to style_design2
+[33m8beef4c7[m HEAD@{29}: checkout: moving from nasra-changes to master
+[33m682f9d00[m[33m ([m[1;31morigin/nasra-changes[m[33m, [m[1;32mnasra-changes[m[33m)[m HEAD@{30}: commit: init
+[33m8beef4c7[m HEAD@{31}: checkout: moving from master to nasra-changes
+[33m8beef4c7[m HEAD@{32}: pull: Fast-forward
+[33ma4dd00ef[m HEAD@{33}: clone: from https://dev.azure.com/JRS-IO/IMS/_git/IMS

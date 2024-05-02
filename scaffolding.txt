@@ -1,0 +1,17 @@
+Scaffold-DbContext "Password=jrs001!;Persist Security Info=True;User ID=jrsu;Initial Catalog=jrsdb;Data Source=185.56.9.137,1434" Microsoft.EntityFrameworkCore.SqlServer  -OutputDir "Models" -ContextDir "DBContexts" -Context "IMSLogContext"  -t IMS_LOGERRORS,IMS_LOGEVENTS -f
+
+
+ npm run updateapi dopo che ho lanciato swagger
+
+            modelBuilder.Entity<PmsCategoryOfIntervention>().HasQueryFilter(p => !p.PmsCoiDeleted);
+
+
+
+
+Scaffold-DbContext "Password=jrs001!;Persist Security Info=True;User ID=jrsu;Initial Catalog=jrsdb;Data Source=185.56.9.137,1434" Microsoft.EntityFrameworkCore.SqlServer  -OutputDir "Models" -ContextDir "DBContexts" -Context "PMSContext"  -t PMS_CATEGORY_OF_INTERVENTION,PMS_TYPE_OF_SERVICE,PMS_COI_TOS_REL -f
+
+            modelBuilder.Entity<PmsCategoryOfIntervention>().HasQueryFilter(p => !p.PmsCoiDeleted);
+            modelBuilder.Entity<PmsTypeOfService>().HasQueryFilter(p => !p.PmsTosDeleted);
+
+ 
+

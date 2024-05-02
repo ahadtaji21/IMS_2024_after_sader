@@ -1,0 +1,108 @@
+.root {
+  width: 98%;
+    margin: 1%;
+    margin-top: 5%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+.header h3 {
+  margin-right: 10px;
+}
+.header h4  {
+  margin-right: 10px;
+  font-size: 18px;
+  font-weight: 600;
+}
+.header p {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+.header {
+  margin-bottom: 10px;
+}
+
+.buttons {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.actions .mdi {
+  font-size: 22px !important;
+}
+
+.datasection{
+  display: flex;
+  align-items: center;
+}
+.datasection button{
+  margin-left: 20px;
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  
+}
+
+.charts{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.graph{
+  border: 1px solid #00000033;
+  border-radius: 5px;
+  height: 300px;
+  width: 100%;
+  margin-right: 25px;
+
+
+
+}
+.graph .header{
+  background-color: aliceblue;
+  color: black;
+  padding: 8px;
+  border: none;
+}
+.graph .body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 85%;
+  
+  
+}
+#graph1 .circle{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px; 
+    width: 200px;
+    background-color: #214885; 
+    border-radius: 50%; 
+    font-size: 27px; 
+    color: white; 
+    font-weight: bold; 
+    text-align: center;
+}
+#graph1 .circle .tit{
+  font-size: 17px;
+}
+
+#graph1 .circle .icon
+{
+  font-size: 44px !important;
+  margin-bottom: -14px;
+  margin-top: -20px;
+}
+#graph1 .circle .coun{
+  font-size: 42px;
+}

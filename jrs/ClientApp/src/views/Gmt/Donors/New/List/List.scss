@@ -1,0 +1,81 @@
+.root {
+  width: 100%;
+  margin-top: 5%;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.header h3 {
+  margin-right: 10px;
+}
+.header p {
+  margin-bottom: 0px;
+  font-size: 14px;
+}
+.buttons {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: start;
+}
+
+.actions .mdi {
+  font-size: 22px !important;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+
+.charts{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.graph{
+  border: 1px solid #00000033;
+  border-radius: 5px;
+  height: 300px;
+  width: 100%;
+  margin-right: 25px;
+
+
+
+}
+.graph .header{
+  background-color: aliceblue;
+  color: black;
+  padding: 8px;
+  border: none;
+}
+.graph .body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 85%;
+  
+  
+}
+#graph1 .circle{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px; 
+    width: 200px;
+    background-color: #214885; 
+    border-radius: 50%; 
+    font-size: 50px; 
+    color: white; 
+    font-weight: bold; 
+    text-align: center;
+}
+
+#graph1 .circle .don{
+  font-size: 13px !important;
+}

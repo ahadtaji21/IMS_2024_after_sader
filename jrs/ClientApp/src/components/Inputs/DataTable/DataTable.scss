@@ -1,0 +1,189 @@
+:root {
+  --color-primary: #42a5f5;
+  --color-darkBlue: #5c78bb;
+  --color-darkerBlue:#214885; 
+  --table-container-color: rgba(0, 0, 0, 0.1);
+
+  --color-border-header: var(--color-darkBlue);
+  --input-border: var(--color-darkBlue);
+  --input-focus-borderColor: var(--color-primary);
+  --paginationBtnBorder: var(--color-darkBlue);
+  --table-header-color: var(--color-darkerBlue);
+  --color-tbody: var(--color-darkerBlue);
+  --tbody-row-bg: white;
+  --hover-row-bg: #eeeeee;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-primary);
+  border-color: var(--color-darkBlue);
+  width: 100%;
+  height: 3.5em;
+  padding: 0 1em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  margin-bottom: 0px !important;
+}
+
+.header h3 {
+  margin-right: 10px;
+  font-size: 1.17;
+  color: white;
+}
+.header p {
+  margin-bottom: 0px;
+  font-size: 14px;
+  color: white;
+}
+
+.table-container {
+  overflow-x: auto;
+  width: 100%;
+  box-shadow: 0 2px 12px var(--table-container-color);
+  margin: 0px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: "Montserrat";
+  min-width: 1000px;
+  white-space: nowrap;
+  table-layout: fixed;
+}
+.table thead th {
+  text-transform: uppercase;
+  padding: 12px 16px;
+  border-bottom: thin solid rgba(0, 0, 0, 0.12);
+  border-right: thin solid rgba(0, 0, 0, 0.12);
+}
+
+.table thead th .thdiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.table thead th .thdiv p {
+  margin-right: 5px !important;
+  text-transform: initial;
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--table-header-color);
+}
+
+.table thead th .thdiv input {
+  background: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  border: 1px solid var(--input-border);
+  border-radius: 4px;
+  width: 40%;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  outline: none;
+  white-space: nowrap;
+}
+
+.table thead th .thdiv input:focus {
+  border-color: var(--input-focus-borderColor);
+  box-shadow: 0 2px 6px rgba(66, 165, 245, 0.2);
+}
+
+// **** tbody ******
+.table tbody {
+  color: var(--color-tbody);
+}
+.table tbody tr {
+  transition: background-color 0.2s;
+  background: var(--tbody-row-bg);
+  height: 10px;
+}
+.table tbody tr:hover {
+  background-color: var(--hover-row-bg);
+}
+
+.table tbody tr td {
+  text-align: center !important;
+  border-bottom: thin solid rgba(0, 0, 0, 0.12);
+  border-right: 1px solid rgba(0, 0, 0, 0.12);
+  height: 48px;
+  white-space: break-spaces;
+}
+.table tbody tr td .table-cell-p {
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  color: var(--color-tbody);
+}
+
+/* Pagination Styles */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 0.75rem;
+  padding: 0 8px;
+
+  background-color: var(--color-primary);
+  color: white;
+}
+.pagination .right{
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.pagination .left p{
+  margin-bottom: 0px !important;
+  font-weight: 700;
+  font-size: 14px;
+}
+.pagination .select {
+  margin-left: auto;
+  margin-right: 14px;
+  display: flex;
+  align-items: center;
+  flex: 0 0 0;
+  justify-content: flex-end;
+  white-space: nowrap;
+}
+.pagination .text {
+  margin: 0 32px 0 24px;
+  text-align: center;
+}
+.pagination .paginationBtn {
+  cursor: pointer;
+  margin: 10px;
+  border: 1px solid var(--paginationBtnBorder);
+  color: white;
+  height: 25px;
+  min-width: 25px;
+}
+
+.pagination .paginationBtn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.actions span {
+  cursor: pointer;
+  margin-right: 10px;
+}
+.actions span:hover {
+  background-color: var(--hover-row-bg);
+}
+.toggle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

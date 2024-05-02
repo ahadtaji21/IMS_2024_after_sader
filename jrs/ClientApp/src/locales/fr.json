@@ -1,0 +1,213 @@
+{
+  "message": "bonjour i18n !!",
+  "general": {
+    "user": "utilisateur | utilisateurs",
+    "language": "langue",
+    "name": "nom",
+    "last-name": "nom de famille",
+    "middle-name": "deuxième nom",
+    "gender": "sexe",
+    "personal-title": "titre",
+    "birth-date": "date de naissance",
+    "birth-place": "lieu de naissance",
+    "religious": "religieux",
+    "search": "rechercher",
+    "username": "nom d'utilisateur",
+    "password": "password",
+    "delete": "delete",
+    "cancel": "annuler",
+    "code": "code",
+    "description": "description",
+    "active": "actif",
+    "type": "type",
+    "location": "emplacement",
+    "country": "pays",
+    "status": "statut",
+    "main-data": "donnée principale",
+    "save": "enregistrer",
+    "save-all": "sauver tous",
+    "crud": {
+      "item-creation": "création d'articles",
+      "item-update": "mise à jour de l'article",
+      "item-deletion": "suppression d'élément",
+      "item-delete-confirm": "êtes-vous sûr de vouloir supprimer l'élément?"
+    },
+    "project-code": "code de project",
+    "annual-plan-code": "Code du annual plan",
+    "today": "aujourd'hui",
+    "day": "journée",
+    "month": "mois",
+    "week": "Semaine",
+    "4-days": "4-jours"
+  },
+  "nav": {
+    "home": "accueil",
+    "about": "à propos de nous",
+    "user-admin-area": "gestion des utilisateurs",
+    "user-list": "liste d'utilisateur",
+    "coi": "catégories d'intervention",
+    "config-pms": "configurer PMS",
+    "jrs-chart-of-accounts": "Plan comptable du JRS",
+    "project-list": "liste de projets",
+    "global-indicators": "indicateurs globaux",
+    "chart-of-accounts": "Plan comptable",
+    "type-of-service": "service",
+    "system": "système",
+    "table-defintion": "définition de table",
+    "project-narrative": "récit du projet",
+    "menu": "définition de menu",
+    "position-list": "liste des positions",
+    "agreement-list": "liste des accords",
+    "annual-plan": "plan annuel",
+    "annual-plans": "plans annuel",
+    "annual-plan-list": "liste des plans annuels",
+    "annual-plan-narrative": "description du plan annuel"
+  },
+  "views": {
+    "view-home": {
+      "welcome-title": "Bienvenue au HR IS",
+      "welcome-message": "HR IS vous aidera à faire votre travail!"
+    },
+    "view-404": {
+      "404-message": "Désolé, nous n'avons pas trouvé la page que vous cherchiez..."
+    }
+  },
+  "datasource": {
+    "ims": {
+      "table-defintion": {
+        "title": "les tables",
+        "table-name": "nom de la table",
+        "create-sp": "créer SP",
+        "read-sp": "lire SP",
+        "update-sp": "mise à jour SP",
+        "delete-sp": "supprimer SP",
+        "title-trans-key": "clé de traduction du titre"
+      },
+      "menu": {
+        "title": "menu",
+        "descr": "description",
+        "url": "URL",
+        "parent": "menu parent",
+        "label-key": "clé d'étiquette",
+        "icon-code": "code d'icône",
+        "hint": "description de la page du menu"
+      }
+    },
+    "pms": {
+      "type-of-service": {
+        "type-of-service": "type de service",
+        "enabled": "type de service activé"
+      },
+      "jrs-chart-of-accounts": {
+        "jrs-chart-of-accounts": "Plan comptable du JRS",
+        "enabled": "Plan comptable du JRS activé"
+      },
+      "global-indicators": {
+        "global-indicators": "Indicateurs Globaux",
+        "enabled": "indicateurs globaux activé"
+      },
+      "project": {
+        "title": "Projets",
+        "start-year": "année de début"
+      },
+      "annual-plan": {
+        "title": "Plans Annuels",
+        "start-year": "année de début"
+      },
+      "category-of-intervention": {
+        "category-of-intervention": "Catégorie d'Intervention",
+        "enabled": "Catégorie d'Intervention activé"
+      },
+      "project-narrative": {
+        "title": "sections narratives",
+        "context": "contexte",
+        "rational": "rationnel",
+        "goal": "but général",
+        "other-context-sections": "Sections de contexte supplémentaires",
+        "section-title": "section titre",
+        "remove-section": "supprimer la section",
+        "add-section": "ajouter une section"
+      }
+    },
+    "hrm": {
+      "biodata": {
+        "title": "biodata de l'utilisateur"
+      },
+      "position": {
+        "title": "position"
+      }
+    }
+  },
+  "pms": {
+    "coi": "Catégorie d'Intervention",
+    "coi-id": "Id",
+    "coi-code": "Code",
+    "coi-description": "Description",
+    "coi-enabled": "Activé",
+    "coi-delete-confirm": "Confirmer la suppression de la Catégorie d'Intervention?"
+  },
+  "error": {
+    "bad-login": "Erreur: nom d'utilisateur ou mot de passe incorrect."
+  },
+  "HRM": {
+    "STAFF": {
+      "staff_first_name": "Prénom",
+      "staff_last_name": "Nom de famille",
+      "staff_first_name_native": "Prénom en langue maternelle",
+      "staff_last_name_native": "Nom de famille en langue maternelle",
+      "jrs_entry_date": "JRS Entry Date",
+      "staff_code": "Date d'entrée au JRS",
+      "staff_gender_id": "Identifiant de sexe",
+      "native_nationality_id": "Nationalité autochtone",
+      "staff_father_name": "Le nom du père",
+      "staff_date_of_birth": "Date de naissance",
+      "staff_place_of_birth": "Lieu de naissance",
+      "native_language": "Langue maternelle",
+      "guid_staff_nationality_id": "Nationalité du personnel",
+      "staff_mother_name": "Le nom de la mère",
+      "guid_native_language_id": "Langue maternelle",
+      "guid_staff_datasection_id": "Identifiant de la section de données du personnel",
+      "guid_data_section_id": "Section Données",
+      "objective_code": "Code objectif",
+
+      "datasection_start_date": "Date de début",
+      "document_start_date": "Date d'émission",
+      "datasection_end_date": "Date de fin",
+      "document_end_date": "Date d'expiration",
+      "datasection_is_active": "c'est actif?",
+      "document_is_active": "c'est actif?",
+      "education_is_active": "c'est actif?",
+      "address_is_active": "c'est actif?",
+      "marital_is_active": "c'est actif?",
+      "contact_is_active": "c'est actif?",
+      "nationality_is_active": "c'est actif?",
+      "staff_is_active": "c'est actif?",
+
+      "is_religious": "est religieux ?",
+      "blood_type_id": "Groupe sanguin",
+      "is_active": "c'est actif?",
+      "guid_marital_status_id": "État civil",
+      "guid_staff_marital_status_id": "guid_staff_marital_status_id",
+      "guid_document_type_id": "Type de document",
+      "staff_contact_values": "Valeurs des contacts",
+      "guid_educational_level_id": "niveau d'éducation",
+      "guid_staff_educational_level_id": "guid_staff_educational_level_id",
+      "guid_country_id": "Pays",
+      "guid_state_id": "État",
+      "guid_city_id": "Ville",
+      "guid_neighborhood_id": "Quartier",
+      "guid_district_id": "District",
+      "is_native": "est autochtone ?",
+      "guid_contact_type_id": "type de contact",
+      "guid_staff_address_id": "Adresse du personnel",
+      "guid_staff_document_id": "Document du personnel",
+      "staff_address_details": "Détails de l'adresse",
+      "document_notes": "Notes sur les documents",
+      "document_number": "numéro de document",
+      "document": "Document joint",
+      "created_date": "Date de création",
+      "actions": "Actions",
+      "IsActiveTrue": "EstActiveTrue"
+    }
+  }
+}

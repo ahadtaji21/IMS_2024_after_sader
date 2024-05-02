@@ -1,0 +1,5 @@
+{
+    "VUE_APP_CLIENT_ID": "866dab3e-3ebd-4cd4-9876-b0f487c7848f",
+    "VUE_APP_TENANT_ID": "9f4e3457-d5dc-4907-af7a-0ddd9936b102",
+    "VUE_APP_REDIRECT_URI": "http://localhost:8080"
+}
